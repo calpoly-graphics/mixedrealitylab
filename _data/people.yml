@@ -1,4 +1,4 @@
-G- name: "Tyler Dahl"
+- name: "Tyler Dahl"
   tag: "Graduate Computer Science Student"
   twitter: "#"
   github: "#tydahlwave"
@@ -17,6 +17,7 @@ G- name: "Tyler Dahl"
   twitter: "#"
   github: "#"
   photo: "dianapertersen.jpg"
+  
 
 - name: "Sam Freed"
   tag: "Graduate Computer Science Student"
