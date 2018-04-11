@@ -1,4 +1,4 @@
-- name: "Christian Eckhardt"
-  tag: "Christian Eckhardt is an Assistant Professor of Computer Science at California Polytechnic State University. He got his PhD from the University of Technology Vienna in Computational Physics and continued his work in parallel computing and simulation as post doc at the University of Vienna. Early, he discovered his passion for real time graphics not only through his work with Graphic Processing Units (GPU) but also by developing a 3D modelling and simulation software for 3D real time graphic applications."
-  github: "rickogobo"
-  photo: "chriseck2.jpg"
+- name: "Advanced Real-Time Ray Tracing"
+  tag: "This thesis is focused on leveraging existing rasterization techniques for quickly creating scenes while leveraging cutting-edge real-time ray tracing technologies using Microsoft's DXR API in DirectX 12. Our goal is to find ways to improve existing rasterized renderers using this new approach to the long-standing problem of real-time ray tracing and evaluate its effectiveness. We are also working on ways to improve the performance of real-time ray tracing using DXR.  Finally, this work will also result in a good, publically available base library for DXR and DX12 for others to build on top of within and outside of the Mixed Reality Lab."
+  github: TBA
+  photo: "reed_thesis_march_2018.png"
