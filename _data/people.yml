@@ -20,5 +20,11 @@
   tag: "I'm a 5th year graduate CSC student working on real-time dynamic global illumination with Christian. I've been a TA for many classes and enjoy helping others out. Outside of school, I enjoy running, backpacking, and games with friends. I'll be graduating June 2018 and then heading off to work at Microsoft in Redmond, WA."
   twitter: "#"
   github: "#"
-  photo: "sam.jpg"
+  photo: "sam.jpg"  
+  
+- name: "Jaafer Sheriff"
+  tag: "I'm a Computer Science major working on real-time volumetric cloud rendering. During my undergrad I've had the pleasure of pursuing my passion of Computer Graphics. Some of my favorite memories have been TAing the Introduction to Computer Graphics course and attending SIGGRAPH 2017. I'm incredibly excited to graduate in June 2018 and start on Microsoft's Minecraft team in Fall 2018."
+  twitter: "#"
+  github: "#"
+  photo: "ja.jpg"
 
