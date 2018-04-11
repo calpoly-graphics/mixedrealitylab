@@ -1,27 +1,24 @@
+- name: "Christian Eckhardt"
+  tag: "Christian Eckhardt is an Assistant Professor of Computer Science at California Polytechnic State University. He got his PhD from the University of Technology Vienna in Computational Physics and continued his work in parallel computing and simulation as post doc at the University of Vienna. Early, he discovered his passion for real time graphics not only through his work with Graphic Processing Units (GPU) but also by developing a 3D modelling and simulation software for 3D real time graphic applications."
+  twitter: "#"
+  github: "rickogobo"
+  photo: "chriseck2.jpg"
+  
 - name: "Tyler Dahl"
   tag: "Graduate Computer Science Student"
   twitter: "#"
   github: "#tydahlwave"
   photo: "tylerdahl.jpg"
 
-
-- name: "Christian Eckhardt"
-  tag: "Founder"
-  twitter: "#"
-  github: "rickogobo"
-  photo: "chriseck2.jpg"
-
-
 - name: "Reed Garmsen"
-  tag: "Graduate Computer Science Student"
+  tag: " Reed Garmsen is a Computer Science Master's Student at Cal Poly focusing on Computer Graphics projects and research. His research interests include Real-Time Global Illumination, Ray Tracing, Game Development, and Software Design. Outside of school, Reed has interned at companies like Google and Microsoft where he worked on products such as Google Docs and Xbox."
   twitter: "#"
   github: "#"
-  photo: "dianapertersen.jpg"
-  
+  photo: "reed_profile_pic.jpg"
 
 - name: "Sam Freed"
-  tag: "Graduate Computer Science Student"
+  tag: "I'm a 5th year graduate CSC student working on real-time dynamic global illumination with Christian. I've been a TA for many classes and enjoy helping others out. Outside of school, I enjoy running, backpacking, and games with friends. I'll be graduating June 2018 and then heading off to work at Microsoft in Redmond, WA."
   twitter: "#"
   github: "#"
-  photo: "dianapertersen.jpg"
+  photo: "sam.jpg"
 
