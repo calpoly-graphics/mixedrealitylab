@@ -7,3 +7,9 @@
   tag: “The goal of this thesis is to digitally remove a real object from a real environment, causing the user to perceive that it doesn’t exist. This is useful when refurnishing a room and viewing virtual furniture to determine what furnishings to buy. Rather than physically removing existing furniture, we can digitally remove them before placing virtual content. This is all performed on the Microsoft HoloLens."
   github: "https://github.com/tydahlwave"
   photo: "diminishedreality.png"
+  
+- name: "Real-time Dynamic Global Illumination using Warped Voxel Cone Tracing"
+  tag: "Global illumination is a generic term that describes light that comes from indirect sources in a scene, such as from reflections and light scattering. In order to approximate this behavior in real-time, we use a filtered representation of a scene's radiance (light energy) and a cone tracing algorithm (similar to raymarching). The goal of this thesis is to improve upon this idea through various optimizations and to provide a public, easy-to-follow implementation for others to learn from or integrate into their own project."
+  github: "https://github.com/sfreed141/vct"
+  photo: "vct.png"
+ 
