@@ -596,7 +596,7 @@ header.masthead .intro-text .intro-heading {
 }
 
 .team-member img {
-  width: 320px;
+  width: 240px;
   height: 240px;
   border: 7px solid #fff;
 }
@@ -608,6 +608,27 @@ header.masthead .intro-text .intro-heading {
 }
 
 .team-member p {
+  margin-top: 0;
+}
+
+.project-content {
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.project-content img {
+  width: 320px;
+  height: 240px;
+  border: 7px solid #fff;
+}
+
+.project-content h4 {
+  margin-top: 25px;
+  margin-bottom: 0;
+  text-transform: none;
+}
+
+.project-content p {
   margin-top: 0;
 }
 
