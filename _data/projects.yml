@@ -1,12 +1,12 @@
-- name: "Student Name"
-  title: "Project Title"
-  photo: "reed_thesis_march_2018.png"
+- name: "Nathan Boyd"
+  title: "AntiGrav Racer"
+  photo: "nathanboyd.png"
 
-- name: "Student Name"
-  title: "Project Title"
-  photo: "diminishedreality.png"
+- name: "Jorge Saro"
+  title: "Wormhole Simulator"
+  photo: "jorgesaro.png"
   
-- name: "Student Name"
-  title: "Project Title"
-  photo: "vct.png"
+- name: "Noah Paige"
+  title: "Cityscape"
+  photo: "noahpaige.png"
  
