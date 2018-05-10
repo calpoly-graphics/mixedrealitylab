@@ -1,0 +1,15 @@
+- name: "Advanced Real-Time Ray Tracing"
+  tag: "This thesis is focused on leveraging existing rasterization techniques for quickly creating scenes while leveraging cutting-edge real-time ray tracing technologies using Microsoft's DXR API in DirectX 12. Our goal is to find ways to improve existing rasterized renderers using this new approach to the long-standing problem of real-time ray tracing and evaluate its effectiveness. We are also working on ways to improve the performance of real-time ray tracing using DXR.  Finally, this work will also result in a good, publically available base library for DXR and DX12 for others to build on top of within and outside of the Mixed Reality Lab."
+  github: TBA
+  photo: "reed_thesis_march_2018.png"
+
+- name: "Real-Time Object Removal in Augmented Reality"
+  tag: “The goal of this thesis is to digitally remove a real object from a real environment, causing the user to perceive that it doesn’t exist. This is useful when refurnishing a room and viewing virtual furniture to determine what furnishings to buy. Rather than physically removing existing furniture, we can digitally remove them before placing virtual content. This is all performed on the Microsoft HoloLens."
+  github: "https://github.com/tydahlwave"
+  photo: "diminishedreality.png"
+  
+- name: "Real-time Dynamic Global Illumination using Warped Voxel Cone Tracing"
+  tag: "Global illumination is a generic term that describes light that comes from indirect sources in a scene, such as from reflections and light scattering. In order to approximate this behavior in real-time, we use a filtered representation of a scene's radiance (light energy) and a cone tracing algorithm (similar to raymarching). The goal of this thesis is to improve upon this idea through various optimizations and to provide a public, easy-to-follow implementation for others to learn from or integrate into their own project."
+  github: "https://github.com/sfreed141/vct"
+  photo: "vct.png"
+ 
