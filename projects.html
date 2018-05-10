@@ -1,0 +1,44 @@
+---
+layout: default
+active: research
+navbar: fill
+---
+
+
+<!-- Team -->
+<section class="bg-light" id="team">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h2 class="section-heading text-uppercase">Research Projects</h2>
+      </div>
+    </div>
+
+
+
+    <div class="row">
+
+
+{% for project in site.data.research %}
+
+      <div class="col-sm-4">
+        <div class="team-member">
+         <img class="img-fluid" src="img/team/{{ project.photo }}" alt="">
+          <h4>{{ project.name }}</h4>
+          <p class="text-muted">{{ project.tag }}</p>
+          <ul class="list-inline social-buttons">
+            <li class="list-inline-item">
+              <a href="{{ project.github }}">
+                <i class="fa fa-github"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+{% endfor %}
+
+
+   
+  </div>
+</section>
