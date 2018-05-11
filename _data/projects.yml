@@ -1,40 +1,50 @@
 - name: "Nathan Boyd"
   title: "AntiGrav Racer"
   photo: "nathanboyd.png"
+  website: "ncboyd_website/USERID/index.html"
 
 - name: "Jorge Saro"
   title: "Wormhole Simulator"
   photo: "jorgesaro.png"
+  website: ""
   
 - name: "Noah Paige"
   title: "Cityscape"
   photo: "noahpaige.png"
+  website: ""
   
 - name: "Eric Burlingame"
   title: "Flight Simulator"
   photo: "ericburlingame.png"
+  website: ""
   
 - name: "Liam Schmid"
   title: "Ocean Waves"
   photo: "liamschmid.png"
+  website: "lmschmid_website/waves.html"
   
 - name: "Christopher McCoy"
   title: "4-Player Brickbreaker"
   photo: "christophermccoy.jpg"
+  website: "cmmccoy_website/index.html"
   
 - name: "Kort Heyneman"
   title: "Spooky Proc-Gen Cave"
   photo: "kortheyneman.png"
+  website: ""
   
 - name: "Chanelle Mosquera"
   title: "Exploding Bunny"
   photo: "chanellemosquera.png"
+  website: ""
   
 - name: "Ryan Vanucci"
   title: "Skyscraper Music Visualization"
   photo: "ryanvanucci.png"
+  website: "rvannucc_website/index.html"
   
 - name: "Andy Khov"
   title: "3D Tetris"
   photo: "andykhov.png"
+  website: ""
  
