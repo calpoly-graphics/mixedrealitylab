@@ -1,0 +1,207 @@
+<html>
+<head>
+  <title>Disco City</title>
+
+  <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: white;
+      color: #333333;
+      -webkit-font-smoothing: antialiased;
+      font-size: 16px;
+      font-family: "Source Sans Pro", Helvetica;
+    }
+
+    img {
+      display: block;
+    }
+
+    em {
+      font-size: 12px;
+    }
+
+    #signature {
+      margin-left: 30px;
+      font-style: oblique;
+    }
+
+    a:link,
+    a:visited {
+      color: #165788;
+      text-decoration: none;
+    }
+
+    a:hover,
+    a:focus,
+    a:active {
+      text-decoration: underline;
+    }
+
+    .wrapper {
+      width: 660px;
+      margin: auto;
+    }
+
+    .container {
+      width: 660px;
+      margin: auto;
+    }
+
+    #content {
+      width: 650px;
+      margin: 70px auto 0px auto;
+    }
+
+    #content article {
+      margin-bottom: 150px;
+    }
+
+    #content h1,
+    #content h2 {
+      color: black;
+      margin-bottom: 30px;
+      font-weight: 200;
+      font-size: 48px;
+    }
+
+    #content h3 {
+      color: black;
+      border-bottom: 1px solid black;
+      text-transform: uppercase;
+      margin: 30px 0px 30px 0px;
+      font-size: 28px;
+      font-weight: 200;
+    }
+
+    #content p {
+      width: 100%;
+      line-height: 150%;
+      margin-bottom: 20px;
+    }
+
+    #content p:first-child {
+      font-size: 18px;
+      font-style: italic;
+      letter-spacing: 2px;
+    }
+
+    #content p:first-child:first-line {
+        font-weight: bold;
+    }
+  
+    #content ul {
+        padding-left:25px
+    }
+
+    pre {
+      font-size: 10px;
+      padding: 15px;
+      border-radius: 10px;
+      background: #ddd;
+    }
+
+   h1 {
+   font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+   font-size: 92px;
+   padding: 80px 50px;
+   text-align: center;
+   text-transform: uppercase;
+   text-rendering: optimizeLegibility;
+   }
+   h1.elegantshadow {
+   color: #131313;
+   background-color: #e7e5e4;
+   letter-spacing: .15em;
+   text-shadow: 1px -1px 0 #767676, -1px 2px 1px #737272, -2px 4px 1px #767474, -3px 6px 1px #787777, -4px 8px 1px #7b7a7a, -5px 10px 1px #7f7d7d, -6px 12px 1px #828181, -7px 14px 1px #868585, -8px 16px 1px #8b8a89, -9px 18px 1px #8f8e8d, -10px 20px 1px #949392, -11px 22px 1px #999897, -12px 24px 1px #9e9c9c, -13px 26px 1px #a3a1a1, -14px 28px 1px #a8a6a6, -15px 30px 1px #adabab, -16px 32px 1px #b2b1b0, -17px 34px 1px #b7b6b5, -18px 36px 1px #bcbbba, -19px 38px 1px #c1bfbf, -20px 40px 1px #c6c4c4, -21px 42px 1px #cbc9c8, -22px 44px 1px #cfcdcd, -23px 46px 1px #d4d2d1, -24px 48px 1px #d8d6d5, -25px 50px 1px #dbdad9, -26px 52px 1px #dfdddc, -27px 54px 1px #e2e0df, -28px 56px 1px #e4e3e2;
+   }
+   h1.deepshadow {
+   color: #e0dfdc;
+   background-color: #333;
+   letter-spacing: .1em;
+   text-shadow: 0 -1px 0 #fff, 0 1px 0 #2e2e2e, 0 2px 0 #2c2c2c, 0 3px 0 #2a2a2a, 0 4px 0 #282828, 0 5px 0 #262626, 0 6px 0 #242424, 0 7px 0 #222, 0 8px 0 #202020, 0 9px 0 #1e1e1e, 0 10px 0 #1c1c1c, 0 11px 0 #1a1a1a, 0 12px 0 #181818, 0 13px 0 #161616, 0 14px 0 #141414, 0 15px 0 #121212, 0 22px 30px rgba(0, 0, 0, 0.9);
+   }
+   h1.insetshadow {
+   color: #202020;
+   background-color: #2d2d2d;
+   letter-spacing: .1em;
+   text-shadow: -1px -1px 1px #111, 2px 2px 1px #363636;
+   }
+   h1.retroshadow {
+   color: #2c2c2c;
+   background-color: #d5d5d5;
+   letter-spacing: .05em;
+   text-shadow: 4px 4px 0px #d5d5d5, 7px 7px 0px rgba(0, 0, 0, 0.2);
+   }
+  </style>
+</head>
+
+<body><div class="wrapper"><section id="content">
+
+<h1 class="elegantshadow">Disco City</h1>
+
+<h4>Ryan Vannucci - CSC 471 - Winter 2018 - Christian Eckhardt</h4>
+
+<article> <!-- This adds padding at the top and bottom -->
+
+
+
+
+<h3>Cityscape Music Visualizer</h3>
+
+<p>
+   The goal of this project was to create a city layout that responds to audio output from the device. The scene consists of the following:
+</p>
+<p> Components
+  <ul>
+    <li>Grid layout with randomized positions and proper scaling and ratation</li>
+    <li>Texutring sky, buildings</li>
+    <li>Reflections</li>
+    <li>Diffuse and specular lighting</li>
+    <li>Illumination Textures</li>
+    <li>Mapping audio changes to building height and illumination color</li>
+  </ul>
+</p>
+<p> Development challenges included:
+  <ul>
+    <li>Correctly utilizing a texture made from audio data (fftw)</li>
+    <li>Positioning buildings on a level plane so that they scale from the bottom</li>
+    <li>Optimizing functionality with hi-poly models</li>
+  </ul>
+</p>
+
+<!-- A Centered image -->
+<center>
+   <h4> Day Scene </h4>   
+  <a>
+    <img src="city.png" width="50%">
+  </a>
+  <em> Diffuse textures, reflection maps</em>
+</center>
+<br>
+
+<center>
+   <h4> Night Scene </h4>
+  <a>
+    <img src="disco_city.png" width="50%">
+  </a>
+  <em> Diffuse textures, reflection maps, illumination textures</em>
+</center>
+
+<h4>Youtube Demo</h4>
+<p><a href="https://youtu.be/hYq0frWaMPI">Demo Video</a></p>
+
+
+
+
+<h3>Resources</h3>
+<ul>
+  <li><a href="https://www.videocopilot.net/products/3d/metropolitan/">Models: VIDEO COPILOT</a></li>
+</ul>
+
+</article></section></div></body></html>
