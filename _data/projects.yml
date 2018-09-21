@@ -25,8 +25,8 @@
 - name: "Connor French"
   title: "Run and jump"
   photo: "cfjnr.jpg"
-  website: "https://cbfrench.github.io/graphics/graphics"
-  website_zip: "https://cbfrench.github.io/graphics/graphics"
+  website: "ConnorFrench/index.html"
+  website_zip: "ConnorFrench/index.html"
   
 - name: "Christopher McCoy"
   title: "4-Player Brickbreaker"
