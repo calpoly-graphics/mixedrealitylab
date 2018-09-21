@@ -16,6 +16,12 @@
   website: "cmmccoy_website/index.html"
   website_zip: "cmmccoy_website/cmmccoy_website.zip"
   
+- name: "Conor Murphy"
+  title: "Moving Histograph"
+  photo: "cmhisto.jpg"
+  website: "ConorMurphy/index.html"
+  website_zip: ""
+    
 - name: "Guraik Claire"
   title: "Bikini Bottom"
   photo: "bikinibottom.jpg"
