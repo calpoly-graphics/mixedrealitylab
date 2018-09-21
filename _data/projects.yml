@@ -15,6 +15,12 @@
   photo: "milestone3_1.png"
   website: "GabriellaSantiago/index.html"
   website_zip: "GabriellaSantiago/index.html"
+
+- name: "Gregory Aitken"
+  title: "3D Thematic Mapping"
+  photo: "gamap.jpg"
+  website: "GregoryAitken/index.html"
+  website_zip: "GregoryAitken/index.html"
   
 - name: "Christopher McCoy"
   title: "4-Player Brickbreaker"
