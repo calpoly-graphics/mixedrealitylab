@@ -12,4 +12,8 @@
   tag: "Global illumination is a generic term that describes light that comes from indirect sources in a scene, such as from reflections and light scattering. In order to approximate this behavior in real-time, we use a filtered representation of a scene's radiance (light energy) and a cone tracing algorithm (similar to raymarching). The goal of this thesis is to improve upon this idea through various optimizations and to provide a public, easy-to-follow implementation for others to learn from or integrate into their own project."
   github: "https://github.com/sfreed141/vct"
   photo: "vct.png"
- 
+  
+ - name: "Real-Time Volumetric Cloud Renderer"
+  tag: "This project introduces an efficient and effective method to render animated, lifelike clouds in real-time. Our clouds dynamically react to other world-parameters like the position of the camera or the sun. Our clouds are also conveniently parameterized to allow for flexible customization of its density, position, sizes, etc."
+  github: "https://github.com/jaafersheriff/Cloud-Renderer"
+  photo: "clouds.gif"
