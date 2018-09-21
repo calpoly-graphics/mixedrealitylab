@@ -1,0 +1,218 @@
+
+<html>
+<head>
+  <title>Star Wars Asteroid Shooter</title>
+
+  <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: white;
+      color: #333333;
+      -webkit-font-smoothing: antialiased;
+      font-size: 16px;
+      font-family: "Source Sans Pro", Helvetica;
+    }
+
+    img {
+      display: block;
+    }
+
+    em {
+      font-size: 12px;
+    }
+
+    #signature {
+      margin-left: 30px;
+      font-style: oblique;
+    }
+
+    a:link,
+    a:visited {
+      color: #165788;
+      text-decoration: none;
+    }
+
+    a:hover,
+    a:focus,
+    a:active {
+      text-decoration: underline;
+    }
+
+    .wrapper {
+      width: 660px;
+      margin: auto;
+    }
+
+    .container {
+      width: 660px;
+      margin: auto;
+    }
+
+    #content {
+      width: 650px;
+      margin: 70px auto 0px auto;
+    }
+
+    #content article {
+      margin-bottom: 150px;
+    }
+
+    #content h1,
+    #content h2 {
+      color: black;
+      margin-bottom: 30px;
+      font-weight: 200;
+      font-size: 48px;
+    }
+
+    #content h3 {
+      color: black;
+      border-bottom: 1px solid black;
+      text-transform: uppercase;
+      margin: 30px 0px 30px 0px;
+      font-size: 28px;
+      font-weight: 200;
+    }
+
+    #content p {
+      width: 100%;
+      line-height: 150%;
+      margin-bottom: 20px;
+    }
+
+    #content p:first-child {
+      font-size: 18px;
+      font-style: italic;
+      letter-spacing: 2px;
+    }
+
+    #content p:first-child:first-line {
+        font-weight: bold;
+    }
+  
+    #content ul {
+        padding-left:25px
+    }
+
+    pre {
+      font-size: 10px;
+      padding: 15px;
+      border-radius: 10px;
+      background: #ddd;
+    }
+  </style>
+</head>
+
+<body><div class="wrapper"><section id="content">
+
+<h1>Star Wars Asteroid Shooter</h1>
+
+<h4>Caleb Barber - CSC 471 - Spring 2018 - Christian Eckhardt</h4>
+
+<article> <!-- This adds padding at the top and bottom -->
+
+
+
+
+<h3>Project Description</h3>
+
+<p>A Star Wars themed space shooter game where the player earns points by shooting asteroids.</p>
+
+
+<!-- A Centered image -->
+<center>
+  <a>
+    <img src="Capture1.jpg" width="100%">
+  </a>
+  <em>Entering the Asteroid Field</em>
+</center>
+<p></p>
+
+
+<p>Technical Features:
+  <ul>
+    <li>3D Collision Physics</li>
+    <li>Instanced Rendering</li>
+    <li>Hierarchical Animation Modeling</li>
+  <li>Diffuse & Specular lighting</li>
+  <li>Texture/Sprite Animation</li>
+  <li>Randomization</li>
+
+  </ul>
+</p>
+
+<p>Challenges:
+  <ul>
+    <li>Refining the controls</li>
+    <li>3D collision detection tracking for lasers, asteroids, ship</li>
+    <li>Scaling asteroids to be random sizes</li>
+  <li>Displaying text on the screen (score counter)</li>
+
+  </ul>
+</p>
+
+
+
+<!-- A Centered image -->
+<center>
+  <a>
+    <img src="Capture2.jpg" width="100%">
+  </a>
+  <em>Asteroid Explosion</em>
+</center>
+<p></p>
+
+
+<!-- A Centered image -->
+<center>
+  <a>
+    <img src="Capture3.jpg" width="100%">
+  </a>
+  <em>Flying by the Star Destroyer</em>
+</center>
+<p></p>
+
+
+<h3>Other Info</h3>
+
+<h4>Controls:</h4>
+<li>W - Up</li>
+<li>S - Down</li>
+<li>A - Left</li>
+<li>D - Right</li>
+<li>Space - Boost</li>
+<li>Enter - Shoot</li>
+<li>P - Pause</li>
+<p></p>
+
+<h4>Gameplay:</h4>
+<li>1 point for each asteroid destroyed (2000 total)</li>
+<li>3 lives, lose one life for each asteroid crash</li>
+<li>Immediate Game Over if crashed into asteroid while boosting or crashed into Star Destroyer</li>
+<p></p>
+
+<h4>Bugs</h4>
+<li>Controls get wonky if you fly upside down. Hold go up and to the side at the same time until you are right-side up again.</li>
+<li>Weird hitbox for Star Destroyer (it's near the bridge)</li>
+
+
+<h3>Source</h3>
+<ul>
+  <li><a href="SpaceShooterProject.zip">SpaceShooterProject.zip</a></li>
+</ul>
+
+<h3>Resources</h3>
+<ul>
+  <li><a href="https://sketchfab.com/models/d34629ae9cf3432188545f36ac1d9cb8#">X-Wing Model</a></li>
+  <li><a href="https://sketchfab.com/models/aaa18e14129a461c839877389bd28504#">Star Destroyer Model</a></li>
+  <li><a href="SpaceShooterProject.zip">Source Code Download</a></li>
+</ul>
+
+
+</article></section></div></body></html>
