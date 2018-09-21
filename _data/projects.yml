@@ -28,6 +28,12 @@
   website: "rvannucc_website/index.html"
   website_zip: "rvannucc_website/rvannucc_website.zip"
   
+- name: "Brian Egana"
+  title: "Realistic Juggling HD"
+  photo: "RealisticJugglingHD.png"
+  website: "beganaweb/index.html"
+  website_zip: "beganaweb/index.html"
+
 - name: "Jorge Saro"
   title: "Wormhole Simulator"
   photo: "jorgesaro.png"
