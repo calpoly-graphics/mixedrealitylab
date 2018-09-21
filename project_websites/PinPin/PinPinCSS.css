@@ -1,0 +1,105 @@
+@font-face {
+	font-family: DubaiRegular;
+	src: url('Fonts/DubaiW23-Regular.ttf');
+}
+@font-face {
+	font-family: DubaiLight;
+	src: url('Fonts/DubaiW23-Light.ttf');
+}
+@font-face {
+	font-family: DubaiMedium;
+	src: url('Fonts/DubaiW23-Medium.ttf');
+}
+@font-face {
+	font-family: DubaiBold;
+	src: url('Fonts/DubaiW23-Bold.ttf');
+}
+
+body {
+	max-width: 64rem;
+	padding: 2rem 6rem;
+	margin: 0 auto;
+	font-family: "DubaiRegular";
+	word-wrap: break-word;
+	background-color: #cfcfc6;
+}
+
+h1 {
+	margin: 0;
+	padding: 0;
+	font-size: 2.5rem;
+	text-align: center;
+	color: #1F497D;
+	line-height: 1rem;
+}
+
+h2 {
+	color: #1F497D;
+	margin: 0.7rem 0 0 0;
+	padding: 0;
+	letter-spacing: 0.09rem;
+}
+
+h3 {
+	font-family: "DubaiRegular";
+	margin: 0;
+	padding: 0;
+	letter-spacing: 0.09rem;
+}
+
+p {
+	font-family: "DubaiLight";
+	margin: 0;
+	padding: 0;
+}
+
+.Subtitle {
+	font-family: "DubaiLight";
+	text-align: center;
+	line-height: 0.1rem;
+	letter-spacing: 0.05rem;
+}
+
+.LineBreak {
+	color: #1F497D;
+	background-color: #1F497D;
+	margin: 0 0 0.7rem 0;
+	padding: 0;
+}
+
+.TitleImages {
+	text-align: center;
+	padding: 1rem 2rem 0rem 2rem;
+}
+
+.List {
+	margin-left: 1.6rem;
+}
+
+.Implementation {
+	font-family: "DubaiLight";
+	margin-left: 1.6rem;
+	line-height: 0.1rem;
+	letter-spacing: 0.05rem;
+	text-decoration: underline;
+	padding: 0;
+}
+
+.Code {
+	font-family: "Courier";
+	font-size: 0.95rem;
+	font-weight: bold;
+}
+
+.CodeRef {
+	font-family: "DubaiLight";
+	font-size: 0.85rem;
+}
+
+.Caption {
+	font-family: "DubaiRegular";
+	font-style: italic;
+	font-size: 0.8rem;
+	margin: 0 0 0.5rem 0;
+	padding: 0;
+}

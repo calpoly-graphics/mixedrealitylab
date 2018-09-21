@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Pin Pin - Pin a Person In Need</title>
+   <link href="PinPinCSS.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+   <h1>Pin Pin - Pin for a Person In Need</h1>
+   <h4 class="Subtitle">Richard Yang</h4>
+   <h4 class="Subtitle">CSC 491/492 | Spring 2018</h4>
+   <hr class="LineBreak"></hr>
+
+   <center><img class="TitleImages" src="Images/food.png">
+   <img class="TitleImages" src="Images/money.png">
+   <img class="TitleImages" src="Images/firstaid.png">
+   <img class="TitleImages" src="Images/ride.png"></center>
+
+   <h2>Introduction</h2>
+   <hr class="LineBreak"></hr>
+      <p>
+         PinPin (Pin for a Person In Need) is a mobile app that is designed to help the millions of homeless people in the world.<br>
+
+         Unemployment levels and the homeless population are on the rise. Homeless shelters and other types of homeless aid are failing 
+         to meet these peoples' needs. PinPin aims to help alleviate this problem by allowing its users to mark the location of homeless 
+         people asking for food, money, first aid, or a ride.<br>
+
+         Other users will then be able to see the Pins that they or other users have placed.
+         Now that they know where the homeless people are, they can bring aid to.
+      </p>
+
+
+   <h2>Source (direct link)</h2>
+   <hr class="LineBreak"></hr>
+      <p>
+<a href="PinPinAndroid-master.zip">Android APK</a><br>
+<a href="PinPinIOS-master.zip">IOS APK</a><br>
+      </p>
+
+
+   <h2>How to use PinPin</h2>
+   <hr class="LineBreak"></hr>
+      <h3>Placing a Pin:</h3>
+         <p>
+            Place a Pin when you want to share the homeless person's location so that other people may come help them.
+         </p>
+         <p class="List">
+            <b>1.</b> Launch the app when you see a homeless person who is asking for help.<br>
+            <b>2.</b> Locate the person's location on the map and tap on the map.<br>
+            <b>3.</b> Choose the need that they are asking for: Food (&#x1F357;), Money (&#x1F4B5;), First Aid (&#x1F691;), or a Ride (&#x1F695;).<br>
+            <b>4.</b> A new Pin will appear on the map in the form of that person's need.<br>
+            <b>5.</b> You and other users will now be able to locate homeless people and bring them the help that they need.<br>
+         </p>
+
+      <h3>Find and help homeless people:</h3>
+         <p>
+            Locate homeless people and bring them what they desperately need.
+         </p>
+         <p class="List">
+            <b>1.</b> Launch the app and look for any Pins that are near your location.<br>
+            <b>2.</b> You may also use the search bar to look for Pins in a specific location.<br>
+            <b>3.</b> You can identify the persons' need based on the appearance of the Pin: Food (&#x1F357;), Money (&#x1F4B5;), First Aid (&#x1F691;), or 
+               a Ride (&#x1F695;).<br>
+            <b>4.</b> If you need directions to a Pin, tap on the Pin and an option to switch to your phone's map app will appear.<br>
+         </p>
+
+      <h3>Deleting a Pin:</h3>
+         <p>Delete a Pin when you have placed a Pin in the wrong location or when there is no one at that location anymore.</p>
+         <p class="List">
+            <b>1.</b> Tap and hold on the invalid Pin.<br>
+            <b>2.</b> An alert will pop up asking for confirmation to delete the Pin.<br>
+            <b>3.</b> Tap "Yes" to delete the Pin.<br>
+            <b>4.</b> Tap "No" or tap anywhere outside the pop up to cancel the deletion.<br><br>
+         </p>
+
+      <p>
+         <b><u>Note:</u></b> Please respect other peoples' privacy! Some people do not like to be tracked 24/7. PinPin automatically deletes Pins that are 
+         older than 6 hours or placed after 10:00 P.M.
+      </p>
+
+
+   <h2>Implementation</h2>
+   <hr class="LineBreak"></hr>
+      <h3>The Front-end:</h3>
+         <center><img src="Images/Screenshot2.png"></center>
+         <p class="List">
+            This app uses the Google Maps API and the Google Places API. To ensure that this app easy to use, it only contains one screen, which is the map
+            initially centered on the user's current location. The user can do just about everything that they can do in any map application such as zooming 
+            out/in, scrolling to a different location, searching for a different location using the search bar, etc. Pins in the form of &#x1F357;, &#x1F4B5;, &#x1F691;, or &#x1F695; 
+            are shown on the map, indicating the location and need of homeless people. To add a Pin, the user taps on any available space on the map. A pop 
+            up then appears asking for the need. To delete a pin, the user taps and holds on an existing Pin and a pop up appears to confirm the delete action.<br><br>
+         </p>
+
+         <h4 class="Implementation">Getting Pins from the Database</h4>
+            <center>
+               <img src="Images/GetPins.png">
+               <p class="Caption">Fig. 1: Getting Pins from the Database and marking them on the map.</p>
+            </center>
+            <p class="List">
+               To put other user's pins onto the map, PinPin needs to read in Pin entries from the database. Every minute, PinPin sends a 
+               HTTP request to the server <b class="CodeRef">(Fig. 1: Line 70)</b>. This request to 
+               <span class="Code">http://129.65.221.101/php/getPinPinGPSdata.php</span> will send every entry in the database formatted as:<br>
+                  <center><span class="Code">[Latitude] [Longitude] [Need] [ServerTime]</span></center>
+            </p>
+            <p class="List">
+               The app then reads in each of these entries from the server and adds them to a global set of Pins called
+               <span class="Code">dbCoords</span> <b class="CodeRef">(Fig. 1: Lines 74 - 91)</b>. After it has read in every entry from the server, 
+               it goes on to the <span class="Code">addMarkers</span> function <b class="CodeRef">(Fig. 1: Line 100)</b> which adds the 
+               Pins onto the map.<br><br><br>
+            </p>
+
+            <center>
+               <img src="Images/PinClass.png">
+               <p class="Caption">Fig. 2: The Pin Class.</p>
+            </center>
+            <p class="List">
+               The <span class="Code">Pin</span> Class serves as the data structure for the Pins and simply contains a 
+               <span class="Code">coords</span> variable <b class="CodeRef">(Fig. 2: Line 6)</b>, which is used to locate where to put
+               the Pin on the map, and the <span class="Code">need</span> variable <b class="CodeRef">(Fig. 2: Line 7)</b>, which is used to
+               determine what the Pin icon will be. The <span class="Code">equals</span> function and the <span class="Code">hashCode</span>
+               function <b class="CodeRef">(Fig. 2: Lines 14 - 30)</b> are required as part of a Java Set Interface.<br><br><br>
+            </p>
+
+            <center>
+               <img src="Images/AddMarkers.png">
+               <p class="Caption">Fig. 3: Adding the Pins to the map from the dbCoords Set.</p>
+            </center>
+            <p class="List">
+               This function takes in all of the <span class="Code">Pins</span> in the <span class="Code">dbCoords</span> set and adds them to the map. To
+               avoid unnecessary load times, only the <span class="Code">Pins</span> that are within 20 km of the user's current location are added to the map.
+               The switch statement determines which icon (&#x1F357;, &#x1F4B5;, &#x1F691;, &#x1F695;) the Pin will have based on the <span class="Code">need</span>
+               <b class="CodeRef">(Fig. 3: Lines 159 - 172)</b>.<br><br>
+            </p>
+
+         <h4 class="Implementation">Adding a Pin</h4>
+            <center>
+               <img src="Images/AddPinOnTap.png">
+               <p class="Caption">Fig. 4: Adding a Pin to the map and database on user tap.</p>
+            </center>
+            <p class="List">
+               The <span class="Code">onMapClick</span> <b class="CodeRef">(Fig. 4: Line 243)</b> function is called when the user taps anywhere on the map.
+               First, an <span class="Code">AlertDialog</span> <b class="CodeRef">(Fig. 4: Line 248)</b> pops up querying for the type of need (&#x1F357;, &#x1F4B5;, &#x1F691;, &#x1F695;).
+               After the user selects the need, the new Pin gets added to the map <b class="CodeRef">(Fig. 4: Lines 251 - 272)</b>. Second, the new Pin is added to
+               the database so that other users can see the new Pin <b class="CodeRef">(Fig. 4: Lines 275 - 288)</b>. This is achieved by sending a HTTP SEND request 
+               formatted as:
+               <center><span class="Code">http://129.65.221.101/php/sendPinPinGPSdata.php?gps=[Latitude] [Longitude] [Need]</span></center><br>
+            </p>
+
+         <h4 class="Implementation">Deleting a Pin</h4>
+            <center>
+               <img src="Images/DeletePinOnTap.png">
+               <p class="Caption">Fig. 5: Deleting a Pin from the map and database on user tap & hold.</p>
+            </center>
+            <p class="List">
+               The <span class="Code">onMapLongClick</span> <b class="CodeRef">(Fig. 5: Line 303)</b> function is called when the user taps and holds anywhere on the map.
+               Unfortunately, the Google Maps API does not have a way to get the Pin coordinates from a long click; it only gives the coordinates of the location that the
+               user tapped. Therefore, I had to determine the closest Pin in the <span class="Code">dbCoords</span> relative to the user's tapped location
+               <b class="CodeRef">(Fig. 5: Lines 306 - 314)</b>. After the closest Pin to the long click is set, an <span class="Code">AlertDialog</span>
+               <b class="CodeRef">(Fig. 5: Line 323)</b> pops up confirming the delete action. If the user taps "Yes", the Pin is first removed from the map
+               <b class="CodeRef">(Fig. 5: Lines 330 - 332)</b> and then the Pin is removed from the database <b class="CodeRef">(Fig. 5: Lines 335 - 351)</b>. This is done
+               via a HTTP SEND request formatted as:
+               <center><span class="Code">http://129.65.221.101/php/deleteFlaggedEntry.php?gps=[Latitude] [Longitude]</span></center>
+            </p>
+            <p class="List">
+               To avoid having the <span class="Code">AlertDialog</span> pop up if the user long clicked too far away from any Pins, a check to see if the closest distance 
+               of the user's tapped location and the nearest pin is performed <b class="CodeRef">(Fig. 5: Lines 317 - 319)</b>. If the distance is greater than 30 meters,
+               an early return from the function is performed. I tested this distance extensively and it seems like 30 meters was the best fit for determining if the user
+               long click was close enough to the actual Pin location. If this distance is too small, it is almost impossible to long click on a Pin because the user tapped 
+               location will not be that close to the true Pin location when tapping on a zoomed out map.<br><br>
+            </p>
+
+      <h3>The Back-end:</h3>
+         <p class="List">
+            This app uses an Apache HTTP Server running on Windows 10, located in the Mixed Reality Lab in California Polytechnic State 
+            University, San Luis Obispo. The IP address for this server is: <span class="Code">129.65.221.101</span>. If the server is down, log onto the computer located in 
+            the right corner of the room when you enter the door, then navigate to the <span class="Code">C:\Apache24\bin</span> folder and run the <span class="Code">httpd.exe</span> 
+            program. To ensure that the server keeps running, <b>DO NOT</b> log off or shut down the computer after starting the <span class="Code">httpd.exe</span> program. Instead, 
+            click on the <u>Power Off</u> button in the Start Menu and select the <u>Switch Accounts</u> option.<br><br>
+
+            All of the code for the back-end is located on the computer and can be viewed at <span class="Code">C:\Apache24\bin\htdocs\php</span>. The back-end consists of five files:<br><br>
+         </p>
+
+         <h4 class="Implementation">PinPinGPSdata.txt</h4>
+            <center>
+               <img src="Images/PinPinTXTfile.png">
+               <p class="Caption">Fig. 6: Example contents of PinPinGPSdata.txt.</p>
+            </center>
+            <p class="List">
+               This text file stores all of the coordinates that users add from the PinPin apps on their phones. Coordinates are written to this text file from the 
+               <span class="Code">sendPinPinGPSdata.php</span> program. Every coordinate is stored with the format:
+               <center><span class="Code">[Latitude] [Longitude] [Need] [ServerTime]</span></center><br>
+            </p>
+
+         <h4 class="Implementation">sendPinPinGPSdata.php</h4>
+            <center>
+               <img src="Images/sendPinPinGPSdata.png">
+               <p class="Caption">Fig. 7: sendPinPinGPSdata PHP program.</p>
+            </center>
+            <p class="List">
+               This PHP program gets the Pins that users have entered from the PinPin mobile app and adds it to the <span class="Code">PinPinGPSdata.txt</span> file.
+               <span class="Code">$msg</span> <b class="CodeRef">(Fig. 7: Line 2)</b> is an array that contains the Latitude, Longitude, and Need located after the
+               <span class="Code">gps=</span> in the HTTP SEND request talked about in the previous <u>Adding a Pin</u> section:
+               <center><span class="Code">http://129.65.221.101/php/sendPinPinGPSdata.php?gps=[Latitude] [Longitude] [Need]</span></center>
+            </p>
+            <p class="List">
+               The program then appends the current datetime (in milliseconds since epoch) to the <span class="Code">$msg</span> and then appends <span class="Code">$msg</span>
+               to <span class="Code">$current</span> <b class="CodeRef">(Fig. 7: Line 5)</b>, which contains the current contents of the <span class="Code">PinPinGPSdata.txt</span>
+               file. Finally, it writes <span class="Code">$current</span> to the <span class="Code">PinPinGPSdata.txt</span> file, replacing everything already in there.<br><br>
+            </p>
+
+         <h4 class="Implementation">getPinPinGPSdata.php</h4>
+            <center>
+               <img src="Images/getPinPinGPSdata.png">
+               <p class="Caption">Fig. 8: getPinPinGPSData PHP program.</p>
+            </center>
+            <p class="List">
+               This PHP program simply writes the contents of the <span class="Code">PinPinGPSdata.txt</span> file to the output buffer via the <span class="Code">readfile</span>
+               <b class="CodeRef">(Fig. 8: Line 6)</b> function. The PinPin mobile app reads in this buffer, parses the coordinates, and adds these coordinates to the map, talked
+               about in the <u>Getting Pins from the Database</u> section.
+            </p>
+
+         <h4 class="Implementation">deleteFlaggedEntry.php</h4>
+            <center>
+               <img src="Images/deleteFlaggedEntry.png">
+               <p class="Caption">Fig. 9: deleteFlaggedEntry PHP program.</p>
+            </center>
+            <p class="List">
+               This PHP program deletes the Pin that a user has deleted from the PinPin app from the <span class="Code">PinPinGPSdata.txt</span> file.
+               <span class="Code">$delete</span> <b class="CodeRef">(Fig. 9: Line 3)</b> is an array that contains the Latitude and Longitude located after the
+               <span class="Code">gps=</span> in the HTTP SEND request talked about in the previous <u>Deleting a Pin</u> section:
+               <center><span class="Code">http://129.65.221.101/php/deleteFlaggedEntry.php?gps=[Latitude] [Longitude]</span></center>
+            </p>
+            <p class="List">
+               The program then iterates through every line in the <span class="Code">PinPinGPSdata.txt</span> file, checks for the matching latitude and longitude
+               <b class="CodeRef">(Fig. 9: Lines 5 - 20)</b>, and appends it to the <span class="Code">$newEntries</span> variable. <b class="CodeRef">(Fig. 9: Line 2)</b>.
+               After the loop, it writes <span class="Code">$newEntries</span> to the <span class="Code">PinPinGPSdata.txt</span> file, replacing everything already in there.<br><br>
+            </p>
+
+         <h4 class="Implementation">deleteOldEntries.py</h4>
+            <center>
+               <img src="Images/deleteoldentries.png">
+               <p class="Caption">Fig. 10: deleteOldEntries python program.</p>
+            </center>
+            <p class="List">
+               Due to privacy concerns, PinPin automatically deletes Pins from the database that are older than 6 hours or placed after 10:00 P.M. The program first reads in the
+               contents of the <span class="Code">PinPinGPSdata.txt</span> file and stores it into the <span class="Code">lines</span> variable <b class="CodeRef">(Fig. 10: Lines 7 - 9)</b>.
+               Then, it iterates through <span class="Code">lines</span> and only writes lines to <span class="Code">PinPinGPSdata.txt</span> if each Pin's time placed has not been more
+               than 6 hours ago, or if the current time is before 10:00 P.M. <b class="CodeRef">(Fig. 10: Lines 11 - 25)</b>.<br><br>
+               This program runs on the computer at the start of every hour, using the built-in Windows Task Scheduler program. I used a 
+               <a target="_blank" href="https://www.youtube.com/watch?v=n2Cr_YRQk7o">YouTube</a> tutorial to implement this.
+            </p>
+
+   <h2>Future Improvements</h2>
+   <hr class="LineBreak"></hr>
+   <p>
+      There are still things that need improving and things to add to PinPin. In the future, I would like to implement a settings page where the user can modify things such as the database 
+      update interval, the radius around the user to show Pins, and more. The process to delete pins could also be improved if Google ever adds the functionality to tap and hold a marker to get
+      its information, instead of having to determine which Pin is the closest to the user's tap. Another idea that I had was to implement Street View, and when someone enters Street View, they
+      would be able to see a 3D Pin at its exact location so that Users can locate homeless people in hard to navigate environment.
+   </p>
+
+   <h2>Download</h2>
+   <hr class="LineBreak"></hr>
+   <p>
+      Android: <a href="https://github.com/RichardYang95/PinPinAndroid">GitHub</a> <a href="PinPin.apk">Android APK</a><br>
+      iOS: <a href="https://github.com/RichardYang95/PinPinIOS">GitHub</a><br>
+      <b><u>Note:</u></b> I do not own an iPhone, which is required to create an iOS .ipa file (The equivalent of an Android .apk file). If you have an iPhone and want to download the .ipa file,
+      clone the iOS github link and follow these instructions: <a href="https://stackoverflow.com/questions/5499125/how-to-create-ipa-file-using-xcode">https://stackoverflow.com/questions/5499125/how-to-create-ipa-file-using-xcode.</a>
+   </p>
+
+</html>
