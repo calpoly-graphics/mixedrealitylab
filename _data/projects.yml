@@ -22,6 +22,12 @@
   website: "GregoryAitken/index.html"
   website_zip: "GregoryAitken/index.html"
   
+- name: "Connor French"
+  title: "Run and jump"
+  photo: "cfjnr.jpg"
+  website: "https://cbfrench.github.io/graphics/graphics"
+  website_zip: "https://cbfrench.github.io/graphics/graphics"
+  
 - name: "Christopher McCoy"
   title: "4-Player Brickbreaker"
   photo: "christophermccoy.jpg"
