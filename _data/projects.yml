@@ -15,6 +15,12 @@
   photo: "christophermccoy.jpg"
   website: "cmmccoy_website/index.html"
   website_zip: "cmmccoy_website/cmmccoy_website.zip"
+  
+- name: "Caleb Barber"
+  title: "Star Wars Asteroid Shooter"
+  photo: "cbstarwars.jpg"
+  website: "CalebBarber/index.html"
+  website_zip: "CalebBarber/SpaceShooterProject.zip"
     
 - name: "Ryan Vanucci"
   title: "Skyscraper Music Visualization"
