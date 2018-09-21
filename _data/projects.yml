@@ -21,6 +21,12 @@
   photo: "gamap.jpg"
   website: "GregoryAitken/index.html"
   website_zip: "GregoryAitken/index.html"
+
+- name: "Quinn Coleman"
+  title: "Supercar Showroom"
+  photo: "dark_title.png"
+  website: "quinnColeman/index.html"
+  website_zip: "quinnColeman/index.html"
   
 - name: "Connor French"
   title: "Run and jump"
