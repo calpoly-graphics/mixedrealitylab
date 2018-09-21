@@ -4,29 +4,11 @@
   github: "rickogobo"
   photo: "chriseck2.jpg"
   
-- name: "Tyler Dahl"
-  tag: "Tyler Dahl is a Computer Science Master’s student at Cal Poly focusing his studies on Computer Graphics and Augmented Reality (AR). For his thesis, Tyler is using the Microsoft HoloLens to remove objects from reality, allowing you to see through them in AR. Outside of school, Tyler enjoys hiking, running, and gaming with friends. He will be starting at Apple in the fall of 2018."
-  twitter: "#"
-  github: "#tydahlwave"
-  photo: "tylerdahl.jpg"
-
 - name: "Reed Garmsen"
   tag: " Reed Garmsen is a Computer Science Master's Student at Cal Poly focusing on Computer Graphics projects and research. His research interests include Real-Time Global Illumination, Ray Tracing, Game Development, and Software Design. Outside of school, Reed has interned at companies like Google and Microsoft where he worked on products such as Google Docs and Xbox."
   twitter: "#"
   github: "#"
   photo: "reed_profile_pic.jpg"
-
-- name: "Sam Freed"
-  tag: "I'm a 5th year graduate CSC student working on real-time dynamic global illumination with Christian. I've been a TA for many classes and enjoy helping others out. Outside of school, I enjoy running, backpacking, and games with friends. I'll be graduating June 2018 and then heading off to work at Microsoft in Redmond, WA."
-  twitter: "#"
-  github: "#"
-  photo: "sam.jpg"  
-  
-- name: "Jaafer Sheriff"
-  tag: "I'm a Computer Science major working on real-time volumetric cloud rendering. During my undergrad I've had the pleasure of pursuing my passion of Computer Graphics. Some of my favorite memories have been TAing the Introduction to Computer Graphics course and attending SIGGRAPH 2017. I'm incredibly excited to graduate in June 2018 and start on Microsoft's Minecraft team in Fall 2018."
-  twitter: "#"
-  github: "#"
-  photo: "ja.png"
   
 - name: "Dominic Tsoi"
   tag: "Dominic Tsoi is a 3rd year Software Engineering major who is also pursuing the Computing for the Interactive Arts minor. His main focus is on real-time music visualization specifically applied to live performances and has had the pleasure of attending Nvidia’s GTC to further his knowledge. Outside of school Dominic enjoys DJing, working out, and traveling."
@@ -40,22 +22,11 @@
   github: "#"
   photo: "chanelle.jpg"
   
-- name: "James Whitney"
-  tag: "I’m a Computer Engineering student working on a Human Computer Interface (HCI) for hand presence in VR/AR with Christian.  My main interests are in high performance/distributed computing and machine learning, my passion for games has driven me into virtual reality.  Outside of school I enjoy hiking, skiing, and board/video games with friends."
-  twitter: "#"
-  github: "#"
-  photo: "James_SQ.jpg"
-  
 - name: "Kolton Yager"
   tag: "Kolton Yager is a 3rd year Computer Science student pursuing a career in computer graphics research and development. In the past Kolton has done graphics work for CSU Long Beach and interned at the Institute of Creative Technologies Graphics Lab. His areas of greatest interest are analytical geometry, virtual reality, and rendering methods. Currently he is involved with several graphics projects here at the Mixed reality lab and he will be heading oversees this summer to participate in a research project on the island country of Malta."
   twitter: "#"
   github: "#"
   photo: "Mountain_prof_2.png"
-  
-- name: "Ryan Blair"
-  tag: "Ryan Blair is a Graduating Computer Science major at Cal Poly focused on Game Design and Graphics. He is the current President of the Cal Poly Esports and Board member for the Cal Poly Dota 2 community. In his free time, Ryan enjoys swimming, playing video games, and serving the community with his friends."
-  twitter: "#"
-  github: "#"
-  photo: "ryan.jpg"
+
 
   
