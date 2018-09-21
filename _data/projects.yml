@@ -1,9 +1,15 @@
+- name: "Lucas Robertson"
+  title: "Procedural Terrain"
+  photo: "lrterrain.jpg"
+  website: "LucasRobertson/index.html"
+  website_zip: "LucasRobertson/index.html"
+
 - name: "Liam Schmid"
   title: "Ocean Waves"
   photo: "liamschmid.png"
   website: "lmschmid_website/waves.html"
   website_zip: "lmschmid_website/lmschmid_website.zip"
-
+  
 - name: "GabriellaSantiago"
   title: "Abstract Music Visualizer"
   photo: "milestone3_1.png"
