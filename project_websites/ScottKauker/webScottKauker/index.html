@@ -1,0 +1,130 @@
+<html>
+<head>
+   <title>Drawing With Sound</title>
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+   <link rel="stylesheet" href="style.css">
+   <style>
+        body {
+            background-image: url("bg.png");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            background-color: rgb(11, 11, 11);
+        }
+
+        .well
+        {
+            background-color: rgba(23, 37, 49, 0.85);
+            border-color: rgb(0, 95, 139);
+            filter: drop-shadow(0 0 1.75rem rgb(37, 60, 102));
+        }
+
+        p, li, h1, h2
+        {
+            color: white;
+        }
+
+        h4
+        {
+            color: rgb(119, 119, 119);
+        }
+
+        #mainimg
+        {
+            max-width: 100%;
+            filter: drop-shadow(0 0 1.75rem rgb(37, 60, 102));
+        }
+
+    </style>
+</head>
+
+<body class="container">
+
+   <div class="page-header">
+
+   <center>
+      <img src="mrlogo_white.png" height=125 style="float:left;">
+      <h1>Drawing With Sound<br><small>Rendering Realtime 3D Shapes with Stereo Audio</small></h1>
+      <h4>Scott Kauker, Christian Eckhardt</h4>
+      <h4>CalPoly Mixed Reality Lab</h4>
+   </center>
+   </div>
+    <center>
+        <center><img id="mainimg" src="main.png"></center></br>
+    </center>
+    </br>
+
+   <div class="well well-lrg">
+        <h1>Abstract</h1>
+        <p>Sound that you hear can be thought of as a continuous waveform dictating vibrations. Digital audio is composed of discrete 'samples' of this waveform. For a given time, a sample of an audio stream reveals the current amplitude of a continuous waveform.</p>
+        <center><img src="waveexample.png" height=125></center></br>
+        <p>Stereo audio is nothing but two distinct audio streams being played simultaneously, one channel for the left speaker, and the other channel for the right speaker. These discrete samples can be reinterpeted to mean something totally new -- with the left sample being an X coordinate on a screen, and the right sample being the Y coordinate, we can map these waveforms to be drawn in 2D space. Most oscilloscopes already have this functionality built in as an "XY" display mode to draw lissajous figures. </p>
+        <h2>Extension to 3D</h2>
+        <p>Drawing 2D lissajous figures like this on an oscilloscope is nothing new and has been around for decades. This project, however, extends this idea into 3D by adding a fixed function for the Z axis (akin to a sawtooth waveform), and allows these stereo waveforms to be visualized in VR.</p>
+        <p>Even further, specific synthesis of waveforms can produce 3 dimensional shapes, all while still being completely audible to the human ear (sometimes annoyingly so, it often is not the most musical). This synthesis can not only be done in real-time, but be performant enough to visualize in Virtual Reality.</p>
+        <p>To render, I essentially imitate an oscilloscope in the third dimension: each stereo sample x-y pair dictates a point in space for the 'trace' to go to. Adjacent points further apart require a faster movement of the trace, and are thus less vibrant. Additionally, overlapping traces are additive, which increases the brightness.</p>
+        <h2>Breaking it down</h1>
+            <p>Traditional lissajous figures on a normal oscilloscope render like the following</p>
+            <center><img src="ex1.png" height=220></center></br></br>
+
+            <p>However, to extend to the third dimension, we add a new 'artificial' channel, taking form of a sawtooth waveform. Where before we had a 2D circle, we now have a 3D spiral.</p>
+            <center><img src="ex2.png" height=110></center></br></br>
+
+            <p>Finally, if we plug each function for the X, Y, and Z axis, we can get a 3 dimensional shape</p>
+            <center><img src="ex3.png" height=150></center></br>
+    </div>
+
+    
+    <div class="well well-lrg">
+        <h1>Video Demonstrations</h1></br>
+        <!-- <center><iframe width="560" height="420" src="https://www.youtube.com/embed/zrqfosClpVI" frameborder="0" allowfullscreen></iframe></center> -->
+        <p>A demonstration of what the mushroom sounds like, versus what it looks like. Its shape is transformed based on the VR controller's orientation, and produces an audibly different sound.</p>
+        <center><iframe width="920" height="480" src="https://www.youtube.com/embed/eVYlYYjEck4" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe></center></br>
+        </br>
+        <p>This video shows the results of feeding in audio data from a song specifically crafted to produce visuals on a 2D oscilloscope.</p>
+        <center><iframe width="920" height="480" src="https://www.youtube.com/embed/_5w7D0OHIoQ" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe></center></br>
+        </br>
+        <p>A longer demonstration of the above song, with no pauses and also when ran through the 3D trace plotter.</p>
+        <center><iframe width="920" height="480" src="https://www.youtube.com/embed/aJHWyHKL10Y" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe></center></br>
+        </br>
+        <p>Finally, what a normal song would look like when ran through the visualizer. While being a bit of chaos, there's a clean pattern for high and low frequencies, especially strong bass hits.</p>
+        <center><iframe width="920" height="480" src="https://www.youtube.com/embed/o4lmP33CRx4" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe></center></br> 
+    </div>
+
+    <div class="well well-lrg">
+        <h1>Project Walk-Through</h1>
+        <p>This project began with a 2 dimensional prototype in OpenGL, to test the concept and performance requirements. It grabs raw sample data from the user's speaker output via Window's WASAPI, and plots them with the method described above (x = left sample, y = right sample).</p>
+        <center><img src="proto.png" height=350><p>The 2D prototype, playing one of <a href="https://www.youtube.com/watch?v=19jv0HM92kw">Jerobeam Fenderson's</a> songs.</p></center></br>
+        <p>Next, I set out to work to bring it into 3D and VR. I decided to use Unity because it had built in VR support, and was pretty extensible in regards to custom shaders and audio.</p>
+        <p>My unity implementation is fairly straight forward: I have a 'source' object from which I procedurally generate samples, via Unity's built-in <a href="https://docs.unity3d.com/ScriptReference/MonoBehaviour.OnAudioFilterRead.html">OnAudioFilterRead</a>. This overridable function let me generate samples and provide it straight into unity's audio system </p>
+        <p>Next, I created a custom line shader to render the lines based on a string of points, including a geometry shader to generate the camera-facing rectangle for each line segment.</p>
+        <p>With that shader, I then blindly consume the audio data coming from my 'source' object, plotting the values for X and Y. For the final Z axis values, I use the sample's index within the audio buffer, which, when plotted, matches that of a sawtooth wave. This produces the 3D images from above.</p>
+        <p>To produce a mushroom specifically, I generate a vertical spiral with a fixed radius, but for the final 1/4 spiral, I multiply the radius by a sine-wave. This forms the 'head' of the mushroom.</p>
+        <center><img id="mainimg" src="ex3.png" width=750></center></br>
+    </div>
+    
+
+    <div class="well well-lrg">
+        <h1>Challenges</h1>
+        <h2>Sample Rate and Bandwidth</h2>
+        <p>Most consumer audio cards and software process samples at a sample rate of 44.1K hertz, which I found is the bare minimum to display advanced scenes. I had difficulty making sure code was fast enough to keep all the audio buffers filled in real time, with time to spare for rendering the samples as well.</p>
+        <h2>Hardware Limitations</h2>
+        <p>Many audio devices and subsystems (including Microsoft’s WASAPI) may perform additional processing to the output signal, such as a low frequency cutoff, volume normalization, or even reverb effects. These effects distort or even destroy the original samples, rendering only a strange lissajous figure. While often these effects can be disabled, some effects, such as frequency cutoffs, are built into the hardware.</p>
+        <p>Because I do all audio processing from within Unity’s audio subsystem, it does not go through the audio device and this is not a problem, but if I were to output to an external oscilloscope, it is something to consider.</p>
+        <h2>Rendering Performance</h2>
+        <p>To render in real time, I needed to construct an efficient line renderer, where each sample is exactly one vertex. I constructed a geometry shader that builds a 3D camera oriented plane between each pair of points. Additionally, I apply a distance-based fade to simulate the fast motion of the electron beam of an oscilloscope. </p>
+    </div>
+
+    <div class="well well-lrg">
+        <h1>Future</h1>
+        <h2>Musical Shapes</h2>
+        <p>Every shape has a unique tone, and its pitch can be trivially changed by simply changing the period of the generated waveform. This, in theory, can be exploited to make waveforms not only sound better, but sound musical. This is already being done in 2D by artists such as <a href="https://oscilloscopemusic.com/">Jerobeam Fenderson</a>.</p>
+        <h2>3 Channel Audio</h2>
+        <p>This project assumes a stereo audio signal with a procedurally generated sawtooth waveform. A third audio channel would allow true 3D tracing in arbitrary directions.</p>
+    </div>
+
+
+   </div>
+</body>
+
+</html>
