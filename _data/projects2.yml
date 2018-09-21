@@ -21,4 +21,11 @@
   photo: "pinpin.jpg"
   website: "PinPin/index.html"
   website_zip: ""
+  
+- name: "Joseph Alfredo and Kevin Yang"
+  title: "Space Economy Simulator"
+  photo: "space.png"
+  website: "SpaceEconomySimulator/index.html"
+  website_zip: ""
+
 
