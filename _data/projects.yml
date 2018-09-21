@@ -4,6 +4,24 @@
   website: "ncboyd_website/USERID/index.html"
   website_zip: "ncboyd_website/ncboyd_website.zip"
 
+- name: "Liam Schmid"
+  title: "Ocean Waves"
+  photo: "liamschmid.png"
+  website: "lmschmid_website/waves.html"
+  website_zip: "lmschmid_website/lmschmid_website.zip"
+  
+- name: "Christopher McCoy"
+  title: "4-Player Brickbreaker"
+  photo: "christophermccoy.jpg"
+  website: "cmmccoy_website/index.html"
+  website_zip: "cmmccoy_website/cmmccoy_website.zip"
+    
+- name: "Ryan Vanucci"
+  title: "Skyscraper Music Visualization"
+  photo: "ryanvanucci.png"
+  website: "rvannucc_website/index.html"
+  website_zip: "rvannucc_website/rvannucc_website.zip"
+  
 - name: "Jorge Saro"
   title: "Wormhole Simulator"
   photo: "jorgesaro.png"
@@ -22,18 +40,6 @@
   website: ""
   website_zip: ""
   
-- name: "Liam Schmid"
-  title: "Ocean Waves"
-  photo: "liamschmid.png"
-  website: "lmschmid_website/waves.html"
-  website_zip: "lmschmid_website/lmschmid_website.zip"
-  
-- name: "Christopher McCoy"
-  title: "4-Player Brickbreaker"
-  photo: "christophermccoy.jpg"
-  website: "cmmccoy_website/index.html"
-  website_zip: "cmmccoy_website/cmmccoy_website.zip"
-  
 - name: "Kort Heyneman"
   title: "Spooky Proc-Gen Cave"
   photo: "kortheyneman.png"
@@ -45,12 +51,6 @@
   photo: "chanellemosquera.gif"
   website: ""
   website_zip: ""
-  
-- name: "Ryan Vanucci"
-  title: "Skyscraper Music Visualization"
-  photo: "ryanvanucci.png"
-  website: "rvannucc_website/index.html"
-  website_zip: "rvannucc_website/rvannucc_website.zip"
   
 - name: "Andy Khov"
   title: "3D Tetris"
