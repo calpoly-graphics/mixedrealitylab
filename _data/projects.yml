@@ -1,14 +1,14 @@
-- name: "Nathan Boyd"
-  title: "AntiGrav Racer"
-  photo: "nathanboyd.png"
-  website: "ncboyd_website/USERID/index.html"
-  website_zip: "ncboyd_website/ncboyd_website.zip"
-
 - name: "Liam Schmid"
   title: "Ocean Waves"
   photo: "liamschmid.png"
   website: "lmschmid_website/waves.html"
   website_zip: "lmschmid_website/lmschmid_website.zip"
+
+- name: "GabriellaSantiago"
+  title: "Abstract Music Visualizer"
+  photo: "milestone3_1.png"
+  website: "GabriellaSantiago/index.html"
+  website_zip: "GabriellaSantiago/index.html"
   
 - name: "Christopher McCoy"
   title: "4-Player Brickbreaker"
@@ -40,6 +40,11 @@
   website: "rvannucc_website/index.html"
   website_zip: "rvannucc_website/rvannucc_website.zip"
   
+- name: "Nathan Boyd"
+  title: "AntiGrav Racer"
+  photo: "nathanboyd.png"
+  website: "ncboyd_website/USERID/index.html"
+  website_zip: "ncboyd_website/ncboyd_website.zip"  
 - name: "Brian Egana"
   title: "Realistic Juggling HD"
   photo: "RealisticJugglingHD.png"
