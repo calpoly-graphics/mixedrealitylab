@@ -30,13 +30,17 @@ navbar: fill
           <ul class="list-inline social-buttons">
             <li class="list-inline-item">
               {% if project.github != null or project.github != "" %}
-                  <a href="{{ project.github }}">
-                    <i class="fa fa-github"></i>
-                  </a>
+                <a href="{{ project.github }}">
+                  <i class="fa fa-github"></i>
+                </a>
+              {% else %}
+                <a href=""></a>
 
             </li>
               {% if project.file != null or project.file != "" %}
-                  <a href="files/team/{{ project.file }}" download="{{ project.file }}"> Download PDF </a>
+                <a href="files/team/{{ project.file }}" download="{{ project.file }}"> Download PDF </a>
+              {% else %}
+                <a href=""></a>
           </ul>
         </div>
       </div>
