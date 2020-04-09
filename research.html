@@ -29,7 +29,7 @@ navbar: fill
           <p class="text-muted">{{ project.tag }}</p>
           <ul class="list-inline social-buttons">
             <li class="list-inline-item">
-              {% if {{ project.github }} != null or {{ project.github }} != "" %}
+              {% if project.github != null or project.github != "" %}
                 <a href="{{ project.github }}">
                   <i class="fa fa-github"></i>
                 </a>
@@ -38,7 +38,7 @@ navbar: fill
               {% endif %}
 
             </li>
-              {% if {{ project.file }} != null or {{ project.file }} != "" %}
+              {% if project.file != null or project.file != "" %}
                 <a href="files/team/{{ project.file }}" download="{{ project.file }}"> Download PDF </a>
               {% else %}
                 <a href=""></a>
