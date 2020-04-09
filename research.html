@@ -28,7 +28,17 @@ navbar: fill
           <p class="text-muted">{{ project.conf }}</p>
           <p class="text-muted">{{ project.tag }}</p>
           <ul class="list-inline social-buttons">
-            <a href="files/team/{{ project.file }}" download="{{ project.file }}"> Download PDF </a>
+            <li class="list-inline-item">
+              <p ng-if="project.github">
+                <a href="{{ project.github }}">
+                  <i class="fa fa-github"></i>
+                </a>
+              </p>
+              
+            </li>
+            <p ng-if="project.file">
+              <a href="files/team/{{ project.file }}" download="{{ project.file }}"> Download PDF </a>
+            </p>
           </ul>
         </div>
       </div>
