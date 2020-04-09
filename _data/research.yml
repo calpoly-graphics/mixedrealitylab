@@ -16,7 +16,7 @@
   conf: "Accepted at iLRN 2020"
   tag: "In this work we present our approach of measuring the influence, importance and immersion of haptic feedback in a virtual reality learning environment. Participants were given the goal to improve themselves to their best ability on a task involving virtual weights supported by real world objects in a mixed reality environment."
   file: "iLrn_2020_Analysis of Haptic Feedback and its Inﬂuences in Virtual Reality Learning Environments.pdf"
-  github: ""
+  github: null
   photo: "hapticFeedback.png"
 
 - name: "An Immersive and Interactive Visualization of Gravitational Waves"
