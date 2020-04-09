@@ -33,14 +33,13 @@ navbar: fill
                 <a href="{{ project.github }}">
                   <i class="fa fa-github"></i>
                 </a>
-              {% else %}
-                <a href=""></a>
+              {% endif %}
 
             </li>
               {% if {{ project.file }} != null or {{ project.file }} != "" %}
                 <a href="files/team/{{ project.file }}" download="{{ project.file }}"> Download PDF </a>
-              {% else %}
-                <a href=""></a>
+              {% endif %}
+
           </ul>
         </div>
       </div>
