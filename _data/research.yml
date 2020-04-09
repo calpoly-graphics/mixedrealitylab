@@ -2,36 +2,48 @@
   conf: "Accepted at iLRN 2020"
   tag: "In this work, we are exploring the role of immersive learning in regards to predicting molecular structures and orbital hybridization. Specifically, we utilize an interactive virtual learn- ing environment to help teach the concept of the Valence Shell Electron Pair Repulsion theory. We developed an interactive and immersive simulation in which participants constructed virtual molecules. "
   file: "iLrn_2020_VSPER Theory, An Interactive and Immersive Learning Environment.pdf"
+  github_shown: false
+  file_shown: true
   photo: "VSPER.png"
 
 - name: "Immersively Learning Object Oriented Programming Concepts With sCool"
   conf: "Accepted at iLRN 2020"
   tag: "The proposed project, sCool, is an adaptive mobile game designed for STEM education. In this work, we present a new iteration of sCool in efforts to further examine contributing factors of engagement and comprehension."
   file: "iLRN_2020_Immersively Learning Object OrientedProgramming Concepts With sCool.pdf"
+  github_shown: false
+  file_shown: true
   photo: "SCool.png"
 
 - name: "Analysis of Haptic Feedback and its Influences in Virtual Reality Learning Environments"
   conf: "Accepted at iLRN 2020"
   tag: "In this work we present our approach of measuring the influence, importance and immersion of haptic feedback in a virtual reality learning environment. Participants were given the goal to improve themselves to their best ability on a task involving virtual weights supported by real world objects in a mixed reality environment."
   file: "iLrn_2020_Analysis of Haptic Feedback and its Inﬂuences in Virtual Reality Learning Environments.pdf"
+  github_shown: false
+  file_shown: true
   photo: "hapticFeedback.png"
 
 - name: "An Immersive and Interactive Visualization of Gravitational Waves"
   conf: "Accepted at iLRN 2020"
   tag: "In this work we are presenting a novel virtual learning environment for understanding the phenomena of grav- itational waves. Emphasizing on the popular aspect of this topic, we developed an interactive and immersive gravitational wave simulation using a field density representation."
   file: "iLrn_2020_An Immersive and Interactive Visualization of Gravitational Waves.pdf"
+  github_shown: false
+  file_shown: true
   photo: "ilrn_grav_waves.png"
 
 - name: "GraViz - An Interactive Visualization of Gravitational Waves"
   conf: "Published at IEEE 2020"
   tag: "In this project we created a novel interactive virtual reality learning environment to improve the understanding of gravitational waves and their effect. A user sees a field density representation of the waves traveling through space time, as well as an abstract representation of earth with an orbiting moon under their effect. The user can travel through this environment via VR controlelrs and has a display with information about the waves effect at one specific point."
   file: "IEEE_VR___GravViz_Poster.pdf"
+  github_shown: false
+  file_shown: true
   photo: "grav_waves.png"
 
 - name: "Special Relativity in Immersive Learning"
   conf: "Published at iLRN 2019"
   tag: "In this paper, we discuss our development, implementation and evaluation of an interactive, real-time, and real-scale virtual real- ity application used to understand the theory of special relativity. Since special relativity deals with non-trivial counter-intuitive subjects such as the twin paradox and the Lorentz contraction, we utilize an immersive VR experience to visualize these phenomena."
   file: "iLRN_2019_Special_Relativity_in_Immersive_Learning_Springer_Template.pdf"
+  github_shown: false
+  file_shown: true
   photo: "special_relativity.png"
 
 
@@ -39,54 +51,74 @@
   conf: "Published at ISVC 2019"
   tag: "As raytracing becomes feasible in regards to computational costs for real-time applications, new challenges emerge to achieve suffi- cient quality. To aim for an acceptable framerate, the amount of con- secutive rays is strongly reduced to keep the workload on the GPU low, but sophisticated approaches for denoising are required. One of the ma- jor bottlenecks is finding the ray intersection with the geometry. In this work, we present a fast alternative by pre-computing a spherical projection of an object and reduce the cost of intersection-testing independent of the vertex count by projecting the object onto a circumscribed sphere."
   file: "ISVC_2019_Spherical_Projection_Approximation_ISVC_2019.pdf"
+  github_shown: false
+  file_shown: true
   photo: "boot.png"
 
 - name: "Immersive Learning for Scale and Order of Magnitude in Newtonian Mechanics"
   conf: "Published at iLRN 2019"
   tag: "The purpose of this paper is to gain a better understanding on the role of immersive learning in regards to one’s intuition on the order of magnitude and scale, by using projectile motion as an example of Newton mechanics. We developed a semi-tangible virtual reality (VR) application that serves as virtual learning environment (VLE). In this ap- plication, participants throw objects and explore the effects of different conditions, such as variations in gravity and air density."
   file: "iLRN_2019_Immersive Learning for Scale and Order of Magnitude in Newtonian Mechanics.pdf"
+  github_shown: false
+  file_shown: true
   photo: "VRLearning.png"
 
 - name: "An Analysis of Peer Presence Social Group Dynamics to Enhance Player Engagement in Multiplayer Games"
   conf: "Published at COG 2019"
   tag: "In this paper, we seek to identify game design paradigms that enhance the player experience for multiplayer games in regards to engagement and immersion through social group dynamic emphasized level design based on peer presence. In order to identify these paradigms, we developed a 2D platform game consisting of several scenarios designed to invoke different sub-categories of peer presence social group dynamics such as group cohesion, peer pressure, leader-observer social identity role distribution and black sheep effects."
   file: "COG_2019_An Analysis of Peer Presence Social Group Dynamics_COG_2019.pdf"
+  github_shown: false
+  file_shown: true
   photo: "MMOJumpRun.png"
 
 - name: "Flex: Hand Gesture Recognition using Muscle Flexing Sensors"
   conf: "Published at ACM SUI 2017"
   tag: "We present Flex, a low cost, lightweight, energy-efficient spatial input armband consisting of four flex resistance sensors. The device provides a continuous, 4-dimensional signal of forearm muscles flex. We train a long short-term memory network (LSTM) to enable real-time recognition of motion gestures as read by the sensor."
   file: "ACM SUI 2017_Flex hand gesture recognition using muscle flexing sensors.pdf"
+  github_shown: false
+  file_shown: true
   photo: "Flex.png"
 
 - name: "Real-time Avatar Animation Synthesis from Course Motion Input"
   conf: "Published at VRST 2017"
   tag: "We present an animation synthesis technique that produces high quality avatar animation from coarse or incomplete motion input by matching, in real-time, the input against thousands of high-quality pre-recorded motion capture templates. The technique uses subse- quence multivariate Quaternion Dynamic Time Warping with the angle between quaternions as a distance measure."
   file: "VRST 2017_Real-time avatar animation synthesis from coarse motion input.pdf"
+  github_shown: false
+  file_shown: true
   photo: "Avatar.png"
 
 - name: "VR Wildfire Prevention: Teaching Campfire Safety in a Gamified Immersive Environment"
   conf: "Published at VRST 2017"
   tag: "This immersive experience guides the user through every step of creat- ing and extinguishing a campfire based on information from the Smokey the Bear campaign. VR Wildfire Prevention aims to engage and educate people in campfire safety by providing a controlled environment to practice the relevant techniques while incentivizing proper behavior through gamification."
   file: "VRST 2017_ wildfire prevention teaching campfire safety in a gamified immersive environment.pdf"
+  github_shown: false
+  file_shown: true
   photo: "CampFire.png"
 
 - name: "Real-Time Object Removal in Augmented Reality"
   tag: "The goal of this thesis is to digitally remove a real object from a real environment, causing the user to perceive that it doesn’t exist. This is useful when refurnishing a room and viewing virtual furniture to determine what furnishings to buy. Rather than physically removing existing furniture, we can digitally remove them before placing virtual content. This is all performed on the Microsoft HoloLens."
   github: "https://github.com/tydahlwave/Thesis"
+  github_shown: true
+  file_shown: false
   photo: "diminishedreality.png"
 
 - name: "Real-Time Volumetric Cloud Renderer"
   tag: "This project introduces an efficient and effective method to render animated, lifelike clouds in real-time. Our clouds dynamically react to other world-parameters like the position of the camera or the sun. Our clouds are also conveniently parameterized to allow for flexible customization of its density, position, sizes, etc."
   file: TBA
   github: "https://github.com/jaafersheriff/Cloud-Renderer"
+  github_shown: true
+  file_shown: false
   photo: "clouds.gif"
 
 - name: "Real-time Dynamic Global Illumination using Warped Voxel Cone Tracing"
   tag: "Global illumination is a generic term that describes light that comes from indirect sources in a scene, such as from reflections and light scattering. In order to approximate this behavior in real-time, we use a filtered representation of a scene's radiance (light energy) and a cone tracing algorithm (similar to raymarching). The goal of this thesis is to improve upon this idea through various optimizations and to provide a public, easy-to-follow implementation for others to learn from or integrate into their own project."
   github: "https://github.com/sfreed141/vct"
+  github_shown: true
+  file_shown: false
   photo: "vct.png"
 
 - name: "Advanced Real-Time Ray Tracing"
   tag: "This thesis is focused on leveraging existing rasterization techniques for quickly creating scenes while leveraging cutting-edge real-time ray tracing technologies using Microsoft's DXR API in DirectX 12. Our goal is to find ways to improve existing rasterized renderers using this new approach to the long-standing problem of real-time ray tracing and evaluate its effectiveness. We are also working on ways to improve the performance of real-time ray tracing using DXR.  Finally, this work will also result in a good, publically available base library for DXR and DX12 for others to build on top of within and outside of the Mixed Reality Lab."
   photo: "reed_thesis_march_2018.png"
+  github_shown: false
+  file_shown: false
