@@ -63,7 +63,7 @@
   photo: "MMOJumpRun.png"
 
 - name: "Real-Time Object Removal in Augmented Reality"
-  tag: “The goal of this thesis is to digitally remove a real object from a real environment, causing the user to perceive that it doesn’t exist. This is useful when refurnishing a room and viewing virtual furniture to determine what furnishings to buy. Rather than physically removing existing furniture, we can digitally remove them before placing virtual content. This is all performed on the Microsoft HoloLens."
+  tag: "The goal of this thesis is to digitally remove a real object from a real environment, causing the user to perceive that it doesn’t exist. This is useful when refurnishing a room and viewing virtual furniture to determine what furnishings to buy. Rather than physically removing existing furniture, we can digitally remove them before placing virtual content. This is all performed on the Microsoft HoloLens."
   file: TBA
   github: "https://github.com/tydahlwave"
   photo: "diminishedreality.png"
