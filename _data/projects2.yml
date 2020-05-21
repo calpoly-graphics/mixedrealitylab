@@ -1,3 +1,9 @@
+- name: "Ryan Nevils"
+  title: "Connect X"
+  photo: "MieHeight22.PNG"
+  website: "ConnectX/index.html"
+  website_zip: ""
+  
 - name: "Kyle Kern"
   title: "Atmospheric Scattering"
   photo: "MieHeight22.PNG"
@@ -9,7 +15,7 @@
   photo: "sshot.jpg"
   website: "MMOJNR/index.html"
   website_zip: ""
-  
+
 - name: "Scott Kauker"
   title: "Drawing With Sound"
   photo: "shroom.png"
@@ -21,7 +27,7 @@
   photo: "pinpin.jpg"
   website: "PinPin/index.html"
   website_zip: ""
-  
+
 - name: "Joseph Alfredo and Kevin Yang"
   title: "Space Economy Simulator"
   photo: "space.png"
@@ -33,4 +39,3 @@
   photo: "nmfrench.gif"
   website: "nmfrench-senior-project/index.html"
   website_zip: ""
-
