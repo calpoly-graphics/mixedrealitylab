@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Oxygen" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Atmospheric Scattering</title>
+</head>
+<body>
+<div class="headbar">
+    <h1>AutoAnim</h1>
+    <h4>Samuel Ellertson - 2020</h4>
+    <small><a href="https://github.com/SamuelEllertson/AutoAnim">GitHub</a></small>
+</div>
+<div class="container">
+
+    <div class="row">
+        <div class="col-12">
+            <h3 class="card-title">Introduction</h3>
+            <p class="card-text">
+				This project combines my love of animation with my love of code. I was inspired to create this
+                after seeing the fantastic work being done in the field of automatic image coloring and shading.
+                I felt that there was a lack of tooling available for artists to be able to quickly create animations
+                based on a photoshop document, without having to learn an entire graphical animation program, which have
+                significant learning curves.
+			</p>
+        </div>
+    </div>
+    <hr/>
+
+
+    <div class="row">
+        <div class="col-sm-12 col-md-6">
+            <h3 class="card-title">
+                The Model
+            </h3>
+            <p class="card-text">
+                AutoAnim takes two seperate inputs from the user: A .psd photoshop document, and an animation script.
+            </p>
+            <ul>
+                <h4 class="card-title">
+                    The psd
+                </h4>
+                <p class="card-text">
+                    The photoshop document defines what properties can be animated, and what the various options for that property are. Animatable properties are represented as a named folder, and options for that property
+                    as layers in that folder. For example, in the example tent animation, there are three distinct animatable properties: The left shooting start, the right shooting star, and the tent lighting.
+                </p>
+                <img src="./images/psd_layout.png" class="rounded"/>
+                <p class="card-text">
+                    any group or layer prefixed with __ (two underscores) will be ignored, which is useful for making a base layer that holds the majority of the image data.
+                </p>
+                <h4 class="card-title">The Script</h4>
+                <p class="card-text">
+                    The animation script runs in a modified python environment. The job of the script is to define a main() function that will be called by AutoAnim. All of the baseline API functions are made available in the global namespace. By far the most commonly used, and often only required, API functions are set_state(property, option), which is how you tell it which layer to display for a given property, and wait(ms), which instructs the animation sequence to wait the specified number of milliseconds before the next action is performed. wait() is smart, in that it knows the current context it is running in, and will only affect the current time in the 'thread' it is called in.
+                </p>
+                <p class="card-text">
+                    On the topic of 'threads', AutoAnim allows animation sequences to run independently of each other. This feature is analagous to having multiple keyframe channels in standard animation software, allowing you to have logically sperate actions actually be seperate. This is a critical feature, and was the most challenging aspect to implement. It should be noted that while it appears to mimic seperate threads, everything is implemented deterministicly in a single thread. All functions, except the entry point main(), are automatically wrapped by the Loopable class, which provides additional functionality, cheif among which is the ability to instead call a function 'foo' in a seperate channel, via foo.loop_background(num). num specifies the number of times to loop, or, if left out, it will loop until it is told to stop at a later time.
+                </p>
+                <p class="card-text">
+                    There is a notion of the 'primary' channel, and secondary background channels. All channels keep track of their position in time individually. Main() is called in the primary channel implicitly.
+                    Calling wait() advances the time in the currently executing channel. Secondary channels that werent given an explicit number of times to loop will appear to loop until .stop() is called on them, though what is actually happening is that they are simply storing the time they were told to start, and then when told to stop() they note the time difference, and perform their task until they have filled or exceeded that time gap. A single loop of a function is atomic, in the sense that it will not stop halfway through even if it exceeds its target stop time. By default, if a channel exceeds its target, it will advance the calling context's time (almost always the primary channel) by waiting() the difference, ensuring that events happen in the order you would expect. This can be changed via the should_wait parameter, in which case it will return the difference.
+                </p>
+                <p class="card-text">
+                    When main concludes, any sequences being run in the background are implicitly told to stop(), which allows the programmer to simply set a repetitive sequence in motion and forget about it, having it last the entire animation.
+                </p>
+            </ul>
+        </div>
+    </div>
+
+	<div class="row">
+        <div class="col-sm-12 col-md-6">
+            <h3 class="card-title">
+                AnimTools
+            </h3>
+            <p class="card-text">
+                AnimTools is essentially a plugin built on top of the standard API, which provides a much cleaner interface for creating distinct sequence components, and a suite of common ways to change between frames of a property.
+            </p>
+            <p class="card-text">
+                A sequence is accessed with the .sequence(name) method, creating an empty sequence if one doesnt exist.
+                AnimTools makes heavy use of method chaining, allowing you to specify long sequences of actions in a very expressive way.
+            </p>
+            <p class="card-text">
+                Common frame manipulation actions include: ('frame' here is refering to property options, ie the layers in a group)
+                <ul>
+                    <li>cycle: Advances frames in order, looping around to the begining. Example frames: 1,2,3,1,2,3,etc
+                    </li>
+                    <li>pulse: Advances frames to the end, then returns. Example frames: 1,2,3,2,1,2,3,etc
+                    </li>
+                    <li>transition: Moves linearly from given start frame to end frame. Example transition 5 -> 2: 5,4,3,2
+                    </li>
+                    <li>full_transition and reverse_transition: Transitions from the first to last frame, or vice versa
+                    </li>
+                </ul>
+            </p>
+        </div>
+    </div>
+    <hr/>
+
+    <div class="row">
+        <div class="col-sm-12 col-md-6">
+            <h3 class="card-title">
+                Example: Tent
+            </h3>
+            <img src="./images/tent_script.png" />
+            <p>
+                It should be noted that I named all my options numbers, but that is not at all required. In the case of tent.psd, each property is defined by a sequential set of frames (ie: each frame of the shooting stars comes after the next in order), thus numbers are accpetable names.
+            </p>
+            <h3 class="card-title">
+                Output:
+            </h3>
+            <video width="600px" controls loop autoplay>
+                <source src="out.webm" type="video/webm">
+            </video>
+
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-12 col-md-6">
+            <h4 class="card-title">
+                Limitations
+            </h4>
+            <p>
+                AutoAnim is built on top of psd-tools, a python library that acts as an interface for psd files, as well as an image compositor. AutoAnim does not actually interface with photoshop, which means that it is limited in its ability to actually generate images to what psd-tools is capable of. The end result of this is that not all affects and layer modes are supported. Additionally, psd-tools has its share of bugs, some of which can be quite frustrating. For example, if you include a completely blank layer in one of your groups, you will likely find that that group will be rendered incorrectly. The workaround in that case is to make sure there is at least one pixel in all of your layers. Psd-tools is still in active development, so I expect many of these issues, which are out of my hands, to be fixed in the future.
+            </p>
+        </div>
+    </div>
+
+    <hr />
+
+    <div class="row">
+        <div class="col-sm-12 col-md-6">
+            <h4 class="card-title">
+                Download
+            </h4>
+            <p><a href="AutoAnim.rar">Source</a></p>
+            <p><a href="https://github.com/SamuelEllertson/AutoAnim">GitHub</a></p>
+
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
+            crossorigin="anonymous"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/shards.min.js"></script>
+</body>
+</html>
