@@ -1,3 +1,13 @@
+- name: "Terrain Assess"
+  conf: ""
+  tag: "In this project we seek to be able to analyze large satellite images and classify what is going on within
+      smaller segments of them so that we might stich these segments together to try and find openspace that
+      could be used in an emergency to land an aircraft. In the scope of this project we seek to classify segments
+      of a larger satellite image as either a development, openspace, rocks, or vegetation.  "
+  file: "../../project_websites/JoeAlaridTerrainAssess/index.html"
+  github: null
+  photo: "ResizedMaster.JPG"
+
 - name: "VSPER Theory, An Interactive and Immersive Learning Environment"
   conf: "Accepted at iLRN 2020"
   tag: "In this work, we are exploring the role of immersive learning in regards to predicting molecular structures and orbital hybridization. Specifically, we utilize an interactive virtual learn- ing environment to help teach the concept of the Valence Shell Electron Pair Repulsion theory. We developed an interactive and immersive simulation in which participants constructed virtual molecules. "
