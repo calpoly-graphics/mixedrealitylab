@@ -24,10 +24,10 @@ navbar: fill
       <div class="col-sm-4">
         <div class="team-member">
          <img class="img-fluid" src="img/team/{{ project.photo }}" alt="">
+         {% if project.website != null %}
+           <a href="project_websites/{{ project.website }}"></a>
+         {% endif %}
           <h4>{{ project.name }}</h4>
-          {% if project.website != null %}
-            <a href="project_websites/{{ project.website }}">
-          {% endif %}
           <p class="text-muted">{{ project.conf }}</p>
           <p class="text-muted">{{ project.tag }}</p>
           {% if project.github != null %}
