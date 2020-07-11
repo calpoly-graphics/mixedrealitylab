@@ -41,6 +41,10 @@ navbar: fill
               <a href="files/team/{{ project.file }}" download="{{ project.file }}"> Download PDF </a>
             </ul>
           {% endif %}
+          {% if project.website != null %}
+            <a href="project_websites/{{ project.website }}">
+          {% endif %}
+
         </div>
       </div>
 
