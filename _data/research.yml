@@ -133,10 +133,11 @@
   github: null
  
 - name: "SIMPI"
-  tag: "SIMPI is a new simple way of executing complex math operations such as matrix inversion or equation solving quickly with the help of parallelization. Our goal is to perform these operations roughly 10x faster. It is best used when implemented on a supercomputer where it has access to a large number of cores or distributed systems. Progress sheet: https://docs.google.com/forms/d/e/1FAIpQLSfxIOjBHEepANnmLVIVEW2SSrbAIsb7Yyfg-KA-Hp74SsHlRg/viewform?usp=sf_link"
+  tag: "SIMPI is a new simple way of executing complex math operations such as matrix inversion or equation solving quickly with the help of parallelization. Our goal is to perform these operations roughly 10x faster. It is best used when implemented on a supercomputer where it has access to a large number of cores or distributed systems."
   photo: "matrix.png"
   website: null
   file: null
   github: "https://github.com/17molebr/SIMPI"
+  github: "https://docs.google.com/forms/d/e/1FAIpQLSfxIOjBHEepANnmLVIVEW2SSrbAIsb7Yyfg-KA-Hp74SsHlRg/viewform?usp=sf_link"
   
 
